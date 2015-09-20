@@ -236,7 +236,7 @@ class GooglePlayBaseSource(RB.Source):
         if mapi.is_authenticated():
             return True
         login, password = get_credentials()
-        return mapi.login(login, password)
+        return mapi.login(login, password, Mapi.FROM_MAC_ADDRESS)
 
     def auth(self, widget):
         dialog = AuthDialog()
